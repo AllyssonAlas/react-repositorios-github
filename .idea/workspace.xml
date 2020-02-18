@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="18ebaf85-52ac-497d-85cf-b0181dffc744" name="Default Changelist" comment="" />
+    <list default="true" id="18ebaf85-52ac-497d-85cf-b0181dffc744" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,7 +75,7 @@
       <workItem from="1581995306893" duration="80000" />
       <workItem from="1581995389539" duration="2254000" />
       <workItem from="1581997781388" duration="1503000" />
-      <workItem from="1582000549370" duration="512000" />
+      <workItem from="1582000549370" duration="814000" />
     </task>
     <task id="LOCAL-00001" summary="Iniciando o projeto.">
       <created>1582000999208</created>
@@ -82,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582000999208</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Iniciando o projeto.">
+      <created>1582001263076</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1582001263076</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,10 +114,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="346" y="140" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1581971775465" />
-    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1582000998463">
+    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1582001262425">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1582000998463" />
+    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1582001262425" />
     <state x="348" y="20" width="669" height="708" key="EditFileWatcherDialog" timestamp="1581995766468">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
