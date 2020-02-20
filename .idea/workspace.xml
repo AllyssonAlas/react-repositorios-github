@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="18ebaf85-52ac-497d-85cf-b0181dffc744" name="Default Changelist" comment="Finalização da aplicação.">
-      <change afterPath="$PROJECT_DIR$/src/components/Container/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+    <list default="true" id="18ebaf85-52ac-497d-85cf-b0181dffc744" name="Default Changelist" comment="Tratamento de erros da página Main com React Toastify">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Main/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Repository/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Repository/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Repository/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Repository/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/global.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +58,16 @@
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="npm start" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -70,6 +78,11 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.build" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -95,7 +108,13 @@
       <workItem from="1582076193645" duration="38000" />
       <workItem from="1582076241334" duration="10308000" />
       <workItem from="1582133009682" duration="6547000" />
-      <workItem from="1582140770919" duration="447000" />
+      <workItem from="1582140770919" duration="1003000" />
+      <workItem from="1582146071744" duration="275000" />
+      <workItem from="1582223281008" duration="191000" />
+      <workItem from="1582223475147" duration="5579000" />
+      <workItem from="1582229153740" duration="128000" />
+      <workItem from="1582229391697" duration="125000" />
+      <workItem from="1582229521019" duration="861000" />
     </task>
     <task id="LOCAL-00001" summary="Iniciando o projeto.">
       <created>1582000999208</created>
@@ -125,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582087459041</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Finalização da aplicação.">
+      <created>1582141227733</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1582141227733</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,7 +163,8 @@
     <MESSAGE value="Finalização da página Main e inicio da lógica da página Repository" />
     <MESSAGE value="Finalização da aplicação" />
     <MESSAGE value="Finalização da aplicação." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finalização da aplicação." />
+    <MESSAGE value="Tratamento de erros da página Main com React Toastify" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tratamento de erros da página Main com React Toastify" />
   </component>
   <component name="WindowStateProjectService">
     <state x="67" y="15" key="#ESLint" timestamp="1581995281835">
@@ -152,10 +179,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="346" y="140" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1581971775465" />
-    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1582140933447">
+    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1582229900426">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1582140933447" />
+    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1582229900426" />
     <state x="348" y="20" width="669" height="708" key="EditFileWatcherDialog" timestamp="1581995766468">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -164,30 +191,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="255" y="111" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1581995040686" />
-    <state width="1344" height="330" key="GridCell.Tab.0.bottom" timestamp="1582140759408">
+    <state width="1344" height="330" key="GridCell.Tab.0.bottom" timestamp="1582229594650">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="330" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582140759408" />
-    <state width="1344" height="330" key="GridCell.Tab.0.center" timestamp="1582140759408">
+    <state width="1344" height="330" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582229594650" />
+    <state width="1344" height="330" key="GridCell.Tab.0.center" timestamp="1582229594650">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="330" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582140759408" />
-    <state width="1344" height="330" key="GridCell.Tab.0.left" timestamp="1582140759408">
+    <state width="1344" height="330" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582229594650" />
+    <state width="1344" height="330" key="GridCell.Tab.0.left" timestamp="1582229594650">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="330" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582140759408" />
-    <state width="1344" height="330" key="GridCell.Tab.0.right" timestamp="1582140759408">
+    <state width="1344" height="330" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582229594650" />
+    <state width="1344" height="330" key="GridCell.Tab.0.right" timestamp="1582229594650">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="330" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582140759408" />
+    <state width="1344" height="330" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582229594650" />
     <state x="184" y="0" key="SettingsEditor" timestamp="1582135396519">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1582135396519" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1582135464805">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1582223726017">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1582135464805" />
+    <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1582223726017" />
     <state x="100" y="100" width="483" height="528" maximized="true" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1581971780903">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { toast } from 'react-toastify'
 import { FaGithubAlt, FaPlus, FaSpinner } from 'react-icons/fa'
+
+import 'react-toastify/dist/ReactToastify.css'
 
 import Container from '../../components/Container'
 
@@ -13,6 +16,7 @@ export default class Main extends Component {
     loading: false,
     newRepo: '',
     repositories: [],
+    error: null,
   }
 
   componentDidMount() {
@@ -40,30 +44,50 @@ export default class Main extends Component {
 
     this.setState({ loading: true })
 
-    const { newRepo, repositories } = this.state
+    try {
+      const { newRepo, repositories } = this.state
 
-    const response = await api.get(`/repos/${newRepo}`)
+      if (newRepo === '') {
+        toast.error('Você precisa colocar algum repositório.')
+        return false
+      }
 
-    const data = {
-      name: response.data.full_name,
+      const hasRepo = repositories.find(r => r.name.toLowerCase() === newRepo.toLowerCase())
+
+      if (hasRepo) {
+        toast.error('Repositório já existe.')
+        return false
+      }
+
+      const response = await api.get(`/repos/${newRepo}`)
+
+      const data = {
+        name: response.data.full_name,
+      }
+
+      this.setState({
+        repositories: [...repositories, data],
+        newRepo: '',
+        loading: false,
+        error: null,
+      })
+    } catch (err) {
+      this.setState({ error: true, newRepo: '' })
+      toast.error('Repositório não encontrado.')
+    } finally {
+      this.setState({ loading: false })
     }
-
-    this.setState({
-      repositories: [...repositories, data],
-      newRepo: '',
-      loading: false,
-    })
   }
 
   render() {
-    const { newRepo, loading, repositories } = this.state
+    const { newRepo, loading, repositories, error } = this.state
     return (
       <Container>
         <h1>
           <FaGithubAlt />
           Repositórios
         </h1>
-        <Form onSubmit={this.handleSubmit}>
+        <Form onSubmit={this.handleSubmit} error={error}>
           <input type="text" placeholder="Adicionar Repositórios" value={newRepo} onChange={this.handleInputChange} />
 
           <SubmitButton loading={loading}>
