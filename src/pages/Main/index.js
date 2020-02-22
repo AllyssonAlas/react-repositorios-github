@@ -48,6 +48,7 @@ export default class Main extends Component {
       const { newRepo, repositories } = this.state
 
       if (newRepo === '') {
+        this.setState({ error: true })
         toast.error('Você precisa colocar algum repositório.')
         return false
       }
@@ -55,6 +56,7 @@ export default class Main extends Component {
       const hasRepo = repositories.find(r => r.name.toLowerCase() === newRepo.toLowerCase())
 
       if (hasRepo) {
+        this.setState({ error: true })
         toast.error('Repositório já existe.')
         return false
       }
