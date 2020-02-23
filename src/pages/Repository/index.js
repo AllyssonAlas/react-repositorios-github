@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import PropTypes from 'prop-types'
 
 import Container from '../../components/Container'
 
 import api from '../../services/api'
 
-import { Loading, Owner, IssueList, Button } from './styles'
+import { Loading, Owner, IssueList, Button, PaginationButton } from './styles'
 
 export default class Repository extends Component {
   static propTypes = {
@@ -22,6 +23,7 @@ export default class Repository extends Component {
     issues: [],
     loading: true,
     issuesType: 'all',
+    issuesPage: 1,
   }
 
   async componentDidMount() {
@@ -33,8 +35,7 @@ export default class Repository extends Component {
       api.get(`/repos/${repoName}`),
       api.get(`/repos/${repoName}/issues`, {
         params: {
-          state: 'open',
-          per_page: 5,
+          page: 1,
         },
       }),
     ])
@@ -53,15 +54,29 @@ export default class Repository extends Component {
     const issues = await api.get(`/repos/${repoName}/issues`, {
       params: {
         state: type,
-        per_page: 5,
+        page: 1,
       },
     })
 
-    this.setState({ issuesType: type, issues: issues.data })
+    this.setState({ issuesPage: 1, issuesType: type, issues: issues.data })
+  }
+
+  handleChangePage = async page => {
+    const { match } = this.props
+
+    const repoName = decodeURIComponent(match.params.repository)
+
+    const issues = await api.get(`/repos/${repoName}/issues`, {
+      params: {
+        page,
+      },
+    })
+
+    this.setState({ issuesPage: page, issues: issues.data })
   }
 
   render() {
-    const { repository, issues, issuesType, loading } = this.state
+    const { repository, issues, issuesType, issuesPage, loading } = this.state
 
     if (loading) {
       return <Loading>Carregando</Loading>
@@ -78,13 +93,13 @@ export default class Repository extends Component {
           <div>
             <h3>Issues</h3>
             <div>
-              <Button selected={issuesType === 'open' && true} onClick={() => this.handleSelectIssueType('open')}>
+              <Button selected={issuesType === 'open'} onClick={() => this.handleSelectIssueType('open')}>
                 Abertas
               </Button>
-              <Button selected={issuesType === 'all' && true} onClick={() => this.handleSelectIssueType('all')}>
+              <Button selected={issuesType === 'all'} onClick={() => this.handleSelectIssueType('all')}>
                 Todas
               </Button>
-              <Button selected={issuesType === 'closed' && true} onClick={() => this.handleSelectIssueType('closed')}>
+              <Button selected={issuesType === 'closed'} onClick={() => this.handleSelectIssueType('closed')}>
                 Fechadas
               </Button>
             </div>
@@ -106,6 +121,15 @@ export default class Repository extends Component {
               </li>
             ))
           )}
+          <div>
+            <PaginationButton disabled={issuesPage === 1} onClick={() => this.handleChangePage(issuesPage - 1)}>
+              <FaChevronLeft />
+            </PaginationButton>
+            <p>{issues.length !== 0 && issuesPage}</p>
+            <PaginationButton disabled={issues.length === 0} onClick={() => this.handleChangePage(issuesPage + 1)}>
+              <FaChevronRight />
+            </PaginationButton>
+          </div>
         </IssueList>
       </Container>
     )
