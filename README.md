@@ -12,7 +12,7 @@ cd react-repositorios-github
 yarn// or npm i
 ```
 
-#Iniciando projeto
+# Iniciando projeto
 
 ```
 yarn// or npm start
